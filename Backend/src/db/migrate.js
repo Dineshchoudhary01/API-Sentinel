@@ -17,8 +17,10 @@ async function runSQL(filename) {
         console.log(`${filename} executed successfully`);
     } catch (error) {
         console.error(`Error executing ${filename}:`, error.message);
+        process.exit(1);
     }
 }
+
 
 
 const action = process.argv[2];
